@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import '../../support/commands'
+import '../../../support/commands'
 
 describe('Basic Auth', () => {
     it('Successfully login by appending username and password in URL', () => {
