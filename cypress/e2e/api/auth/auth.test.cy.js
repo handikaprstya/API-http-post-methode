@@ -16,7 +16,6 @@ describe('Basic Auth', () => {
         });
         
         cy.LoginViaAPI('admin', 'admin')
-        cy.url().should('contain', 'basic_auth')
         cy.get('p').should('contain.text', 'Congratulations! You must have the proper credentials.')
 
     });

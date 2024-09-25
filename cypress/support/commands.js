@@ -56,7 +56,7 @@ Cypress.Commands.add('LoginViaAPI', (email = 'admin', password = 'admin') => {
         expect(res.status).to.eq(200)
 
         cy.setCookie('authToken', encodedCredentials);
-
-        cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
+        cy.url().should('contain', 'basic_auth')
+        // cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
     })
 })
